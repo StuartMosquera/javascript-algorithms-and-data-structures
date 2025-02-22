@@ -1,0 +1,147 @@
+/* BASIC RESET */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* GLOBAL VARIABLES */
+:root {
+  --background-color: #2b2c43;
+  --button-color: linear-gradient(#fff, #a9a9a9);
+  --foreground-color: #fff;
+  --foreground-results-color: #4a4a28;
+  --middle-ground-color: #a9a9a9;
+}
+
+/* GLOBAL STYLES */
+body {
+  background-color: var(--background-color);
+  color: var(--foreground-color);
+  font-family: Helvetica, sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+/* CONTAINER START */
+.container {
+  align-items: center;
+  display: flex;
+  flex-flow: column nowrap;
+  height: auto;
+  padding: 40px 20px;
+  row-gap: 25px;
+  width: 100%;
+}
+
+/* HEADER START */
+header {
+  text-align: center;
+}
+/* HEADER END */
+
+/* MAIN START */
+/* SECTION START */
+.validator-section {
+  align-items: center;
+  background-color: #000;
+  border-radius: 20px;
+  display: flex;
+  flex-flow: column nowrap;
+  height: 450px;
+  justify-content: center;
+  padding: 15px 20px;
+  row-gap: 15px;
+  width: min(80vw, 260px);
+}
+
+.circle {
+  background-color: var(--middle-ground-color);
+  border-radius: 50%;
+  display: inline-block;
+  height: 12px;
+  width: 10px;
+}
+
+.input-div {
+  align-items: center;
+  background-color: var(--middle-ground-color);
+  color: #000;
+  display: inherit;
+  flex-flow: column nowrap;
+  font-size: 0.90em;
+  height: 100%;
+  padding: 10px 12px;
+  row-gap: 18px;
+  width: 100%;
+}
+
+#user-input {
+  border: 1px solid;
+  border-radius: 10px;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  height: auto;
+  padding: 10px;
+  text-align: center;
+  width: 100%;
+}
+
+#results-div {
+  color: var(--foreground-results-color);
+  font-size: 1.2em;
+  max-height: 210px;
+  overflow-wrap: break-word;
+  overflow-y: auto;
+  text-align: center;
+  width: 100%;
+}
+
+.valid {
+  color: #004f0c;
+}
+
+.buttons-div {
+  column-gap: 25px;
+  display: inherit;
+  flex-flow: row nowrap;
+  height: auto;
+  justify-content: center;
+  padding: 2px;
+  width: 100%;
+}
+
+#check-btn,
+#clear-btn {
+  background: var(--button-color);
+  border: 3px outset #fff;
+  font-family: inherit;
+  font-size: 1em;
+  font-weight: inherit;
+  height: auto;
+  padding: 1px 0;
+  width: 5.5rem;
+}
+
+#check-btn:hover,
+#clear-btn:hover {
+  cursor: pointer;
+}
+
+#check-btn:active,
+#clear-btn:active {
+  border: 3px inset #fff;
+}
+/* SECTION END */
+/* MAIN END */
+/* CONTAINER END */
+
+/* RESPONSIVE DESIGN */
+@media only screen and (max-width: 600px) {
+  body {
+    font-size: 16px;
+  }
+}
+/* Made by Stuart Mosquera */

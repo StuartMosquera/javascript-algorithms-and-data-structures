@@ -1,0 +1,247 @@
+/* BASIC RESET */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* GLOBAL VARIABLES */
+:root {
+  --background-color: #000430;
+  --button-color: #980dd4;
+  --foreground-color: #fff;
+  --middle-ground-color: #f3f3f3;
+}
+
+/* GLOBAL STYLES */
+body {
+  background-color: var(--background-color);
+  color: var(--foreground-color);
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+/* CONTAINER START */
+.container {
+  align-items: center;
+  display: flex;
+  flex-flow: column nowrap;
+  height: auto;
+  padding: 40px 20px;
+  row-gap: 25px;
+  width: 100%;
+}
+
+/* HEADER START */
+header {
+  text-align: center;
+}
+/* HEADER END */
+
+/* MAIN START */
+main {
+  align-items: center;
+  background-color: var(--middle-ground-color);
+  border-radius: 15px;
+  box-shadow: 8px 8px 0 #8f8f8f;
+  display: flex;
+  flex-flow: column nowrap;
+  height: auto;
+  padding: 20px;
+  row-gap: 20px;
+  width: min(80vw, 440px);
+}
+
+/* FORM START */
+.input-form {
+  align-items: center;
+  color: #000;
+  display: inherit;
+  flex-flow: row wrap;
+  gap: 10px 15px;
+  height: auto;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+}
+
+#search-input {
+  font-family: inherit;
+  font-size: 0.80em;
+  font-weight: inherit;
+  height: auto;
+  padding: 10px;
+  width: 210px;
+}
+
+#search-input:focus {
+  outline: solid #3393ff;
+}
+
+#search-button {
+  background-color: var(--button-color);
+  border: none;
+  border-radius: 16px;
+  color: var(--foreground-color);
+  font-family: inherit;
+  font-size: 0.80em;
+  font-weight: inherit;
+  height: auto;
+  padding: 15px;
+  text-align: center;
+  width: 80px;
+}
+
+#search-button:hover {
+  cursor: pointer;
+}
+/* FORM END */
+
+.pokemon-section {
+  align-items: center;
+  background-color: #ebebeb;
+  color: #000;
+  display: inherit;
+  flex-flow: column nowrap;
+  font-size: 0.80em;
+  height: 320px;
+  padding: 10px;
+  width: 100%;
+}
+
+.top-div {
+  align-self: flex-start;
+  column-gap: 10px;
+  display: inherit;
+  flex-flow: row nowrap;
+  font-size: 0.80em;
+  height: auto;
+  text-align: center;
+  width: 100%;
+}
+
+.top-div > h2 {
+  font-weight: lighter;
+}
+
+.mid-div {
+  column-gap: 10px;
+  display: inherit;
+  flex-flow: row nowrap;
+  height: auto;
+  text-align: center;
+  width: 100%
+}
+
+#types {
+  align-items: flex-end;
+  display: inherit;
+  height: 100%;
+  width: 100%;
+}
+
+#types > span {
+  border-radius: 5px;
+  font-size: 0.80em;
+  margin-right: 0.5rem;
+  padding: 6px 12px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+span.normal,
+span.steel {
+  background-color: #adadad;
+}
+
+span.fighting,
+span.poison {
+  background-color: #a4788f;
+}
+
+span.flying,
+span.ghost {
+  background-color: #705aae;
+}
+
+span.ground,
+span.rock {
+  background-color: #9c813d;
+}
+
+span.bug,
+span.grass {
+  background-color: #95c565;
+}
+
+span.fire,
+span.dragon {
+  background-color: #d6783e;
+}
+
+span.water {
+  background-color: #4d80b0;
+}
+
+span.electric {
+  background-color: #e0de57;
+}
+
+span.psychic,
+span.fairy {
+  background-color: #e367b4;
+}
+
+span.ice {
+  background-color: #84dae4;
+}
+
+span.dark {
+  background-color: #806558;
+}
+
+.stats-section {
+  height: auto;
+  width: 100%
+}
+
+table {
+  background-color: var(--button-color);
+  border-collapse: collapse;
+  font-size: 0.95em;
+  height: 100%;
+  text-align: center;
+  width: inherit;
+}
+
+tr {
+  border-bottom: 5px solid var(--middle-ground-color);
+}
+
+tbody > tr:last-of-type {
+  border-bottom: none;
+}
+
+th,
+td {
+  padding: 0.5rem;
+}
+
+th:last-of-type,
+td:last-of-type {
+  border-left: 5px solid var(--middle-ground-color);
+}
+
+/* MAIN END */
+/* CONTAINER END */
+
+/* RESPONSIVE DESIGN */
+/* SMARTPHONES */
+@media only screen and (max-width: 600px) {
+  body {
+    font-size: 16px;
+  }
+}
+/* Made by Stuart Mosquera */

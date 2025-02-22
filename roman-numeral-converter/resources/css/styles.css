@@ -1,0 +1,126 @@
+/* BASIC RESET */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* GLOBAL VARIABLES */
+:root {
+  --background-color: #1d1c36;
+  --button-color: linear-gradient(#ffca43, #ffab30);
+  --foreground-color: #fff;
+  --middle-ground-alert-color: #ffa6a6;
+  --middle-ground-converter-color: #4f4e6f;
+}
+
+/* GLOBAL STYLES */
+body {
+  background-color: var(--background-color);
+  color: var(--foreground-color);
+  font-family: "Times", serif;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+/* CONTAINER START */
+.container {
+  align-items: center;
+  display: flex;
+  flex-flow: column nowrap;
+  height: auto;
+  padding: 40px 20px;
+  row-gap: 25px;
+  width: 100%;
+}
+
+/* HEADER START */
+header {
+  font-size: 1.10em;
+  font-weight: lighter;
+  line-height: 1.2;
+  text-align: center;
+  max-width: 200px;
+}
+/* HEADER END */
+
+/* MAIN START */
+/* SECTION START */
+.converter-section {
+  align-items: center;
+  background-color: var(--middle-ground-converter-color);
+  border: 3px solid #fff;
+  display: flex;
+  flex-flow: column nowrap;
+  font-family: Arial, sans-serif;
+  height: auto;
+  padding: 2rem 2.5rem;
+  row-gap: 20px;
+  text-align: center;
+  width: min(80vw, 500px);
+}
+
+.converter-section > label {
+  font-size: 1.3em;
+  font-weight: bold;
+}
+
+#number {
+  background-color: #000;
+  border: 1px solid var(--foreground-color);
+  color: var(--foreground-color);
+  font-family: inherit;
+  font-size: 2em;
+  font-weight: inherit;
+  height: auto;
+  padding: 5px 10px;
+  width: 100%;
+}
+
+#number:focus {
+  outline: solid #3393ff;
+}
+
+#convert-btn {
+  background: var(--button-color);
+  border: 3px solid #ffab32;
+  display: block;
+  font-family: inherit;
+  font-size: 1.2em;
+  font-weight: inherit;
+  height: auto;
+  padding: 12px 10px;
+  text-align: inherit;
+  width: 100%;
+}
+
+#convert-btn:hover {
+  cursor: pointer;
+}
+/* SECTION END */
+
+#output {
+  background-color: var(--middle-ground-alert-color);
+  border: 3px solid #8e0505;
+  color: #8e0505;
+  display: none;
+  font-family: Arial, sans-serif;
+  font-size: 1.6em;
+  height: auto;
+  overflow-wrap: break-word;
+  padding: 1rem;
+  text-align: center;
+  width: min(80vw, 500px);
+}
+/* MAIN END */
+/* CONTAINER END */
+
+/* RESPONSIVE DESIGN */
+/* SMARTPHONES */
+@media only screen and (max-width: 600px) {
+  body {
+    font-size: 18px;
+  }
+}
+/* Made by Stuart Mosquera */
