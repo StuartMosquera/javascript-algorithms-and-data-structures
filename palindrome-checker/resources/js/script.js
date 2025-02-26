@@ -34,4 +34,11 @@ checkBtn.onclick = function () {
   const inputValue = textInput.value;
   checkPalindrome(inputValue);
 };
+
+textInput.onkeydown = function (event) {
+  if (event.key === "Enter") {
+    const inputValue = textInput.value;
+    checkPalindrome(inputValue);
+  }
+};
 // Made by Stuart Mosquera

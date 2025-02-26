@@ -83,4 +83,12 @@ searchButton.addEventListener("click", event => {
   const inputValue = searchInput.value;
   searchPokemon(cleanStr(inputValue));
 });
+
+searchInput.addEventListener("keydown", event => {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    const inputValue = searchInput.value;
+    searchPokemon(cleanStr(inputValue));
+  }
+});
 // Made by Stuart Mosquera

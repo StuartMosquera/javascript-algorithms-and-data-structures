@@ -94,6 +94,18 @@ purchaseBtn.onclick = function () {
   }
 };
 
+cash.onkeydown = function (event) {
+  if (event.key === "Enter") {
+    const inputValue = Number(cash.value);
+    const totalChange = Number((inputValue - price).toFixed(2));
+    if (cash.value === "") {
+      return;
+    } else {
+      updateChangeDue(totalChange);
+    }
+  }
+}
+
 total.innerHTML = `<p>Total: \$${price}</p>`;
 updateDrawer();
 // Made by Stuart Mosquera

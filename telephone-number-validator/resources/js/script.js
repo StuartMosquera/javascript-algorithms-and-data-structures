@@ -37,4 +37,14 @@ checkBtn.onclick = function () {
 clearBtn.onclick = function () {
   clearValues();
 }
+
+userInput.onkeydown = function (event) {
+  if (event.key === "Enter") {
+    const inputValue = userInput.value;
+    checkValue(inputValue);
+  }
+  if (event.key === "Delete") {
+    clearValues();
+  }
+};
 // Made by Stuart Mosquera

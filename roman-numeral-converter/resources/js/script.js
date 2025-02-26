@@ -53,4 +53,11 @@ convertBtn.onclick = function () {
   const inputValue = parseInt(num.value);
   showRomanNum(inputValue);
 }
+
+num.onkeydown = function (event) {
+  if (event.key === "Enter") {
+    const inputValue = parseInt(num.value);
+    showRomanNum(inputValue);
+  }
+};
 // Made by Stuart Mosquera
