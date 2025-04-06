@@ -1,0 +1,202 @@
+/* BASIC RESET */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* GLOBAL VARIABLES */
+:root {
+  --background-color: #00083d;
+  --button-color: linear-gradient(#ffca43, #ffab30);
+  --foreground-color: #fff;
+  --middle-ground-color: #74c3e5;
+}
+
+/* GLOBAL STYLES */
+body {
+  background-color: var(--background-color);
+  color: var(--foreground-color);
+  font-family: "Times New Roman", serif;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+/* CONTAINER START */
+.container {
+  align-items: center;
+  display: flex;
+  flex-flow: column nowrap;
+  height: auto;
+  padding: 40px 20px;
+  row-gap: 25px;
+  width: 100%;
+}
+
+/* HEADER START */
+header {
+  text-align: center;
+}
+/* HEADER END */
+
+/* MAIN START */
+main {
+  align-items: center;
+  display: inherit;
+  flex-flow: inherit;
+  height: auto;
+  width: 100%;
+}
+
+#change-due {
+  height: auto;
+  margin-top: -1rem;
+  margin-bottom: 1rem;
+  overflow-wrap: break-word;
+  text-align: center;
+  width: 100%;
+}
+
+.input-section {
+  align-items: center;
+  display: inherit;
+  flex-flow: column nowrap;
+  height: auto;
+  margin-bottom: 30px;
+  row-gap: 10px;
+  text-align: center;
+  width: 100%;
+}
+
+#cash {
+  font-family: inherit;
+  font-size: 0.75em;
+  font-weight: lighter;
+  height: auto;
+  padding: 5px 10px;
+  width: 190px;
+}
+
+#purchase-btn {
+  background: var(--button-color);
+  border: 3px outset #ffab32;
+  font-family: inherit;
+  font-size: 0.95em;
+  font-weight: bold;
+  height: auto;
+  margin-top: 5px;
+  padding: 2.5px;
+  text-align: center;
+  width: 100px;
+}
+
+#purchase-btn:hover {
+  cursor: pointer;
+}
+
+#purchase-btn:active {
+  border: 3px inset #ffab32;
+}
+
+.cash-register-section {
+  height: auto;
+  width: min(80vw, 350px);
+}
+
+.total-div {
+  background-color: #000;
+  border: 0.6rem solid var(--middle-ground-color);
+  height: auto;
+  text-align: center;
+  width: 180px;
+}
+
+.conector {
+  background: var(--middle-ground-color);
+  height: 40px;
+  margin-left: 2rem;
+  width: 40px;
+}
+
+.items-div {
+  background: var(--middle-ground-color);
+  border-top-left-radius: 10%;
+  border-top-right-radius: 10%;
+  display: flex;
+  flex-flow: row nowrap;
+  height: 300px;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  padding: 20px;
+  width: 100%;
+}
+
+.blocks-div {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 5px;
+  height: 85px;
+  margin-top: 1rem;
+  width: 28%;
+}
+
+.block {
+  background-color: #000;
+  border-radius: 2.5px;
+  height: 22px;
+  width: 22px;
+}
+
+.drawer-div {
+  background-color: #fff;
+  color: #000;
+  height: 100%;
+  font-size: 0.96em;
+  overflow-y: auto;
+  overflow-wrap: break-word;
+  width: 60%;
+  padding: 5px;
+}
+
+.drawer-div > h2 {
+  font-size: 1.05em;
+}
+
+.drawer-div > p {
+  line-height: 1.4;
+  text-transform: capitalize;
+}
+
+.footer-div {
+  background: var(--middle-ground-color);
+  display: flex;
+  height: 50px;
+  justify-content: center;
+  width: 100%;
+}
+
+.circle {
+  align-self: center;
+  background-color: var(--background-color);
+  border-radius: 50%;
+  height: 25px;
+  width: 25px;
+}
+/* MAIN END */
+/* CONTAINER END */
+
+/* RESPONSIVE DESIGN */
+/* SMARTPHONES */
+@media only screen and (max-width: 600px) {
+  body {
+    font-size: 18px;
+  }
+
+  .block {
+    height: 20px;
+    width: 20px;
+  }
+}
+
+/* Made by Stuart Mosquera */
