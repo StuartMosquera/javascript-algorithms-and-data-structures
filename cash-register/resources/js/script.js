@@ -45,6 +45,7 @@ const updateStatus = (change, status) => {
     changeDue.innerHTML = `<p>Status: ${status[0]}</p>`;
     return;
   }
+  
   let changeArray = [];
   for (let i = cid.length - 1; i >= 0; i--) {
     let denomName = cid[i][0];
@@ -56,11 +57,13 @@ const updateStatus = (change, status) => {
       denomTotal = Number((denomTotal - denomValue).toFixed(2));
       amountToGive = Number((amountToGive + denomValue).toFixed(2));
     }
+
     if (amountToGive > 0) {
       changeArray.push([denomName, amountToGive]);
       cid[i][1] = denomTotal;
     }
   }
+
   let remainingCid = Number(cid.reduce((accumulator, currentValue) => accumulator + currentValue[1], 0).toFixed(2));
   if (change > 0) {
     changeDue.innerHTML = `<p>Status: ${status[0]}</p>`;

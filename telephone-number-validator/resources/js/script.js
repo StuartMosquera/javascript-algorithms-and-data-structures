@@ -43,6 +43,7 @@ userInput.onkeydown = function (event) {
     const inputValue = userInput.value;
     checkValue(inputValue);
   }
+
   if (event.key === "Delete") {
     clearValues();
   }
