@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RPG Creature Search App</title>
+    <link rel="stylesheet" href="styles/style.css">
+  </head>
+
+  <body>
+    <div class="container">
+      <!-- Header -->
+      <header>
+        <h1>RPG Creature Search App</h1>
+      </header>
+
+      <!-- Main Content -->
+      <main>
+        <!-- Search Form -->
+        <form action="">
+          <label for="search-input">Search for Creature Name or ID:</label>
+          <input type="text" id="search-input" required>
+          <button id="search-button">Search</button>
+        </form>
+
+        <!-- Creature Card -->
+        <div class="creature">
+          <div class="top">
+            <h2 id="creature-name"></h2>
+            <p id="creature-id"></p>
+          </div>
+          <div class="mid">
+            <p id="weight"></p>
+            <p id="height"></p>
+          </div>
+          <div id="types"></div>
+          <div class="creature-description"></div>
+        </div>
+
+        <!-- Creature Stats -->
+        <table>
+          <thead>
+            <tr>
+              <th>Base</th>
+              <th>Stats</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>HP:</td>
+              <td id="hp"></td>
+            </tr>
+            <tr>
+              <td>Attack:</td>
+              <td id="attack"></td>
+            </tr>
+            <tr>
+              <td>Defense:</td>
+              <td id="defense"></td>
+            </tr>
+            <tr>
+              <td>Sp. Attack:</td>
+              <td id="special-attack"></td>
+            </tr>
+            <tr>
+              <td>Sp. Defense:</td>
+              <td id="special-defense"></td>
+            </tr>
+            <tr>
+              <td>Speed:</td>
+              <td id="speed"></td>
+            </tr>
+          </tbody>
+        </table>
+      </main>
+
+      <!-- Footer -->
+      <footer>
+        <p>Made by Stuart Mosquera | 2025</p>
+      </footer>
+    </div>
+
+    <!-- Script -->
+    <script src="scripts/main.js"></script>
+    <noscript>
+      <p>Your browser does not support JavaScript or you have it disabled.</p>
+    </noscript>
+  </body>
+</html>

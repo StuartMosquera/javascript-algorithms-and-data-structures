@@ -1,0 +1,111 @@
+/* Reset styles */
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+input,
+button {
+  box-sizing: border-box;
+  font-family: inherit;
+  font-size: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Global variables */
+:root {
+  --btn-bg: #560564;
+  --font-stack: Verdana, sans-serif;
+  --main-bg: #050519;
+  --primary-color: #fff;
+  --section-bg: #0f3c0a;
+}
+
+/* Global styles */
+body {
+  background-color: var(--main-bg);
+  color: var(--primary-color);
+  font-family: var(--font-stack);
+  font-size: 1rem;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  row-gap: 2rem;
+}
+
+/* Header styles */
+header {
+  font-size: 1.10em;
+  padding-left: 0.4rem;
+  padding-right: 0.4rem
+}
+
+/* Palindrome Div styles */
+.palindrome-div {
+  align-items: center;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 6px 6px #0505c8;
+  color: #000;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  margin-bottom: 2rem;
+  max-width: 450px;
+  padding: 1.25rem 0.625rem;
+  row-gap: 1.5rem;
+}
+
+#text-input {
+  border: none;
+  border-bottom: 2px solid var(--btn-bg);
+  font-size: 1.2em;
+  margin-right: 0.625rem;
+  text-align: center;
+  width: 60%;
+}
+
+#check-btn {
+  background-color: var(--btn-bg);
+  border: none;
+  border-radius: 16px;
+  color: var(--primary-color);
+  font-size: 0.85em;
+  max-width: 86px;
+  padding-bottom: 0.625rem;
+  padding-top: 0.625rem;
+  width: 100%;
+}
+
+#check-btn:hover {
+  cursor: pointer;
+}
+
+#result {
+  font-size: 1.3em;
+}
+
+/* Definition Div styles */
+.definition-div {
+  background-color: var(--section-bg);
+  border-radius: 20px;
+  font-size: 1.2em;
+  max-width: 450px;
+  padding: 1rem 2rem;
+}

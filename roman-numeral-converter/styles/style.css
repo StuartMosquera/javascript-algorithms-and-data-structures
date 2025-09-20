@@ -1,0 +1,125 @@
+/* Reset styles */
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+input,
+button {
+  box-sizing: border-box;
+  font-family: inherit;
+  font-size: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Global variables */
+:root {
+  --btn-bg: linear-gradient(#ffca43, #ffab30);
+  --font-size: 1.250rem;
+  --font-stack: 'Times', serif;
+  --main-bg: #1d1c36;
+  --primary-color: #fff;
+  --section-bg: #3c3c50;
+}
+
+/* Global styles */
+body {
+  background-color: var(--main-bg);
+  color: var(--primary-color);
+  font-family: var(--font-stack);
+  font-size: var(--font-size);
+  line-height: 1.5;
+  text-align: center;
+}
+
+.container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin-top: 4rem;
+  row-gap: 1.563rem;
+}
+
+/* Header styles */
+header {
+  line-height: 1.2;
+  max-width: 320px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2em;
+  font-weight: 200;
+}
+
+/* Converter Div styles */
+.converter-div {
+  align-items: center;
+  background-color: var(--section-bg);
+  border: 3px solid #fff;
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, sans-serif;
+  max-width: 500px;
+  padding: 2rem 2.5rem;
+  row-gap: 1.25rem;
+}
+
+.converter-div label {
+  flex: 1 1 auto;
+  font-size: 1.2em;
+  font-weight: 700;
+  width: 100%;
+}
+
+#number {
+  background-color: #000;
+  border: 1px solid #fff;
+  color: var(--primary-color);
+  font-size: 2em;
+  padding: 0.313rem 0.625rem;
+  width: 100%;
+}
+
+#number:focus {
+  outline-color: #3393ff;
+  outline-style: solid;
+  outline-width: initial;
+}
+
+#convert-btn {
+  background: var(--btn-bg);
+  border: 3px solid #ffab32;
+  display: block;
+  font-size: 1.2em;
+  padding: 0.75rem 0.625rem;
+  width: 100%;
+}
+
+#convert-btn:hover {
+  cursor: pointer;
+}
+
+#output {
+  border-style: solid;
+  border-width: 3px;
+  display: none;
+  font-family: Arial, sans-serif;
+  margin-top: 2rem;
+  max-width: 500px;
+  padding: 0.5rem 1rem;
+}
+
+/* Footer styles */
+footer {
+  margin-bottom: 4rem;
+}
