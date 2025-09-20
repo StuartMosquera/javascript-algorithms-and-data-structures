@@ -1,4 +1,3 @@
-// DOM Variables
 const searchInput = document.getElementById('search-input');
 const searchButton = document.getElementById('search-button');
 const creatureName = document.getElementById('creature-name');
@@ -14,10 +13,8 @@ const specialAttack = document.getElementById('special-attack');
 const specialDefense = document.getElementById('special-defense');
 const speed = document.getElementById('speed');
 
-// API URL
 const CREATURE_URL = 'https://rpg-creature-api.freecodecamp.rocks/api/creature';
 
-// Function to search for a creature
 async function searchCreature(creature) {
   const creatureQuery = `${normalizeText(creature)}`;
   const endpoint = `${CREATURE_URL}/${creatureQuery}`;
@@ -38,7 +35,6 @@ async function searchCreature(creature) {
   }
 }
 
-// Function to display creature details in the UI
 function displayCreature(creature) {
   cleanUI();
 
@@ -67,7 +63,6 @@ function displayCreature(creature) {
   speed.textContent = creature.stats[5].base_stat;
 }
 
-// Function to clean the UI before displaying a new creature
 function cleanUI() {
   creatureName.textContent = '';
   creatureId.textContent = '';
@@ -83,7 +78,6 @@ function cleanUI() {
   speed.textContent = '';
 }
 
-// Function to set the background color based on creature type
 function setCreatureColor(type) {
   switch (type) {
     case 'bug':
@@ -122,10 +116,8 @@ function setCreatureColor(type) {
   }
 }
 
-// Function to normalize text for API queries
 const normalizeText = text => text.replace(/[\W]/g, '').toLowerCase();
 
-// Event listeners for search functionality
 searchButton.onclick = function(event) {
   event.preventDefault();
   searchCreature(searchInput.value);

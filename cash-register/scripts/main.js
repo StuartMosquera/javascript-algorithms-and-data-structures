@@ -1,11 +1,9 @@
-// DOM Variables
 const changeDue = document.getElementById('change-due');
 const cash = document.getElementById('cash');
 const purchaseBtn = document.getElementById('purchase-btn');
 const total = document.querySelector('.total');
 const drawer = document.querySelector('.drawer');
 
-// Global Constants
 const DENOM_NAMES = [
   'Pennies',
   'Nickels',
@@ -29,7 +27,6 @@ const CURRENCY_VALUES = {
   'ONE HUNDRED': 100.00
 };
 
-// Global Variables
 let price = 3.26;
 let cid = [
   ['PENNY', 1.01],
@@ -45,7 +42,6 @@ let cid = [
 
 total.innerHTML = `<p>Total: $${price}</p>`;
 
-// Initialize the drawer with the current cash-in-drawer amounts
 function cashRegister() {
   const cashFloat = parseFloat(cash.value);
 
@@ -67,14 +63,12 @@ function cashRegister() {
   cash.value = '';
 }
 
-// Display the change due message
 function displayChangeDue(message) {
   changeDue.innerHTML = '';
   changeDue.style.textAlign = message.includes('Status') ? 'left' : 'center';
   changeDue.innerHTML = message;
 }
 
-// Update the status of the cash register and calculate change
 function updateStatus(change) {
   const totalCid = round(cid.reduce((accumulator, currentValue) =>
     accumulator + currentValue[1], 0)
@@ -97,7 +91,6 @@ function updateStatus(change) {
   updateDrawer();
 }
 
-// Calculate the change to be given back to the customer
 function calculateChange(change) {
   const changeArray = [];
 
@@ -122,7 +115,6 @@ function calculateChange(change) {
   return changeArray;
 }
 
-// Update the drawer display with the current cash-in-drawer amounts
 function updateDrawer() {
   drawer.innerHTML = '';
   drawer.innerHTML = `<h2>Change in drawer:</h2>`;
@@ -134,10 +126,8 @@ function updateDrawer() {
   }
 }
 
-// Round a number to two decimal places
 const round = num => Math.round(num * 100) / 100;
 
-// Event listeners for the purchase button and cash input
 purchaseBtn.onclick = () => cashRegister();
 
 cash.onkeydown = function (event) {
@@ -146,5 +136,4 @@ cash.onkeydown = function (event) {
   }
 };
 
-// Update the drawer display initially
 updateDrawer();

@@ -1,4 +1,3 @@
-/* Reset styles */
 html {
   box-sizing: border-box;
   font-size: 16px;
@@ -21,7 +20,6 @@ button {
   padding: 0;
 }
 
-/* Global variables */
 :root {
   --btn-bg: linear-gradient(#fff, #a9a9a9);
   --font-size: 1rem;
@@ -31,7 +29,6 @@ button {
   --section-bg: #a9a9a9;
 }
 
-/* Global styles */
 body {
   background-color: var(--main-bg);
   color: var(--primary-color);
@@ -48,7 +45,6 @@ body {
   row-gap: 1.563rem;
 }
 
-/* Header styles */
 header {
   text-align: center;
 }
@@ -75,7 +71,6 @@ header {
   width: 10px;
 }
 
-/* Input div styles */
 .input-div {
   align-items: center;
   background-color: var(--section-bg);
@@ -122,7 +117,6 @@ header {
   color: #004f0c;
 }
 
-/* Buttons div styles */
 .buttons-div {
   column-gap: 1.563rem;
   display: inherit;
